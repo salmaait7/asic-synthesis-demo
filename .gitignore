@@ -1,0 +1,7 @@
+
+*.vcd
+*.vvp
+
+synth/top_netlist.v
+
+
