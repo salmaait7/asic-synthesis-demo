@@ -23,3 +23,6 @@ asic-synthesis_folw/<br>
 -**Simulation**<br>
 ./sim/run_sim.sh
 
+### Ressources
+- Standard-cell libraries derived from the FreePDK45 / Nangate Open Cell Library, provided for research and educational purposes: **https://github.com/mflowgen/freepdk-45nm** <br>
+- Yosys “CMOS” Example: Useful for understanding how RTL logic is mapped to CMOS structures and for verifying synthesis results; **https://github.com/YosysHQ/yosys/tree/main/examples/cmos**
