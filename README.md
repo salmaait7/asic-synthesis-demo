@@ -8,18 +8,18 @@ This project demonstrates a simple **ASIC design flow** using open-source tools
 
 ###  Project Structure
 
-asic-synthesis_folw/
-├── src/ # RTL VHDL source file
-├── tb/ # Testbenche
-├── synth/ # Yosys synthesis
-├── sim/ # Simulation outputs and script
-└── libs/ # Standard cell libraries (Nangate45)
+asic-synthesis_folw/<br>
+├── src/ # RTL VHDL source file<br>
+├── tb/ # Testbenche<br>
+├── synth/ # Yosys synthesis<br>
+├── sim/ # Simulation outputs and script<br>
+└── libs/ # Standard cell libraries (Nangate45)<br>
 
 ### How to use
 
-- **Synthesis**
+-**Synthesis**<br>
  yosys -m ghdl -s synth/run.ys
 
- - **Simulation **
+-**Simulation**<br>
 ./sim/run_sim.sh
 
