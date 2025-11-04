@@ -4,7 +4,7 @@ This project demonstrates a simple **ASIC design flow** using open-source tools
 ###  Tools Used
 - **Yosys + GHDL** → for synthesis (RTL → gate-level)
 - **Icarus Verilog (iverilog)** → for simulation
-- **GTKWave** → for waveform visualization
+- **GTKWave** → for waveform visualization <br>
 All these tools were used through the **OSS CAD Suite**, which provides an integrated open-source environment for digital design, synthesis, and simulation.
 To set up the environment after installation, run the following command in your terminal:
 source ~/oss-cad-suite/environment
