@@ -1,0 +1,11 @@
+# Read and synth
+ghdl --std=08 src/top_rtl.vhd -e top
+synth -top top
+
+# Mappe to Nangate45
+dfflibmap -liberty libs/stdcells.lib
+abc       -liberty libs/stdcells.lib
+
+# Write the gate-level netlist
+write_verilog synth/top_netlist.v
+stat
