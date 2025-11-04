@@ -17,10 +17,9 @@ asic-synthesis_folw/
 
 ### How to use
 
-# Synthesis
+- **Synthesis**
  yosys -m ghdl -s synth/run.ys
 
-# Simulation
-
+ - **Simulation **
 ./sim/run_sim.sh
 
