@@ -1,4 +1,3 @@
-# ASIC-Flow
 
 This project demonstrates a simple **ASIC design flow** using open-source tools
 
