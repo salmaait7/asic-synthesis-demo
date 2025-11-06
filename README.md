@@ -26,7 +26,7 @@ asic-synthesis_folw/<br>
 
 
 ### Results:
-<img width="700" height="643" alt="image" src="https://github.com/user-attachments/assets/7599c1f9-08f7-43c3-98b9-adfd5dda5993" />
+<img width="983" height="266" alt="image" src="https://github.com/user-attachments/assets/7663d1c1-5e29-4a60-b046-81657de5b482" />
 
 
 ### Ressources
