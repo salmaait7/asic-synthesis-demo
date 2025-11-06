@@ -24,6 +24,11 @@ asic-synthesis_folw/<br>
 -**Simulation**<br>
 ./sim/run_sim.sh
 
+
+### Results:
+<img width="700" height="643" alt="image" src="https://github.com/user-attachments/assets/7599c1f9-08f7-43c3-98b9-adfd5dda5993" />
+
+
 ### Ressources
 - To install OSS CAD Suite: **https://github.com/YosysHQ/oss-cad-suite-build/releases**
 - Standard-cell libraries derived from the FreePDK45 / Nangate Open Cell Library, provided for research and educational purposes: **https://github.com/mflowgen/freepdk-45nm** <br>
