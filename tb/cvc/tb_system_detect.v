@@ -22,9 +22,9 @@ module tb;
       .sum(sum),
       .cout(cout),
 
-      .p01_dbg(p01_dbg),
-      .p12_dbg(p12_dbg),
-      .p23_dbg(p23_dbg),
+      .p01(p01_dbg),
+      .p12(p12_dbg),
+      .p23(p23_dbg),
       .pulse(pulse)
   );
 
