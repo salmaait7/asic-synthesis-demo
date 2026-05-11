@@ -5,14 +5,23 @@ module full_adder_ht (
     output sum,
     output cout
 );
-    wire x1, x2, x3, x4;
+    wire x1;
+    wire x2;
+    wire x3;
+    wire x4;
 
-    assign #5 x1  = a ^ b;
-    assign #5 sum  = x1 ^ cin;
-    assign #4 x3  = a & b;
-    assign #4 x4  = cin & x1;
+    wire trigger;
 
-    // payload
-    assign #3 x2 = x3 | x4;
-    assign #2 cout  = x2 ^ 1'b0;
+    assign x1 = a ^ b;
+    assign x2 = x1 ^ cin;
+
+    assign x3 = a & b;
+    assign x4 = cin & x1;
+    assign cout = x3 | x4;
+
+    assign trigger = a & b & cin;
+
+    
+    assign sum = x2 ^ trigger;
+
 endmodule

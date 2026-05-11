@@ -2,33 +2,51 @@ module system_detect (
     input  [3:0] a,
     input  [3:0] b,
     input        cin,
-    input        rst,
-    output [3:0] sum_clean,
-    output [3:0] sum_ht,
-    output       pulse,
-    output       error
+
+    output [3:0] sum,
+    output       cout,
+
+    output       p01_dbg,
+    output       p12_dbg,
+    output       p23_dbg,
+
+    output       pulse
 );
-    wire cout_clean, cout_ht;
 
-    adder4_clean u_clean (
-        .a(a), .b(b), .cin(cin),
-        .sum(sum_clean), .cout(cout_clean)
+    wire [3:0] sum_internal;
+    wire       cout_internal;
+
+    wire s0_delayed;
+    wire s1_delayed;
+    wire s2_delayed;
+
+    wire p01;
+    wire p12;
+    wire p23;
+    wire pulse_raw;
+
+    adder4_ht u_adder (
+        .a(a),
+        .b(b),
+        .cin(cin),
+        .sum(sum_internal),
+        .cout(cout_internal)
     );
 
-    adder4_ht u_ht (
-        .a(a), .b(b), .cin(cin),
-        .sum(sum_ht), .cout(cout_ht)
-    );
+    assign sum  = sum_internal;
+    assign cout = cout_internal;
 
-    comparator cmp (
-        .ref_sig(sum_clean[0]),
-        .test_sig(sum_ht[0]),
-        .pulse(pulse)
-    );
 
-    sensing_unit sen (
-        .pulse(pulse),
-        .rst(rst),
-        .error(error)
-    );
+    assign p01 = sum_internal[0] ^ sum_internal[1];
+    assign p12 = sum_internal[1] ^ sum_internal[2];
+    assign p23 = sum_internal[2] ^ sum_internal[3];
+
+    assign pulse_raw = p01 | p23 | p12;
+
+    assign p01_dbg = p01;
+    assign p12_dbg = p12;
+    assign p23_dbg = p23;
+
+    assign pulse = pulse_raw;
+
 endmodule
