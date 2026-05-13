@@ -9,10 +9,10 @@ module tb;
   wire [3:0] sum;
   wire cout;
 
-  wire p01_dbg;
-  wire p23_dbg;
-  wire p12_dbg;
-  wire pulse;
+  wire p01;
+  wire p23;
+  //wire p12;
+  //wire pulse;
 
   system_detect dut (
       .a(a),
@@ -22,10 +22,10 @@ module tb;
       .sum(sum),
       .cout(cout),
 
-      .p01(p01_dbg),
-      .p12(p12_dbg),
-      .p23(p23_dbg),
-      .pulse(pulse)
+      .p01(p01),
+      //.p12(p12),
+      .p23(p23)
+      //.pulse(pulse)
   );
 
   initial begin
