@@ -1,0 +1,15 @@
+{
+  "DESIGN_NAME": "system_detect",
+
+  "VERILOG_FILES": [
+    "dir::../../src/rtl/inline_deline/delay_line_4.v",
+    "dir::../../src/rtl/system_detect.v",
+    "dir::../../src/rtl/adder4_ht.v",
+    "dir::../../src/rtl/adder4_clean.v",
+    "dir::../../src/rtl/full_adder_ht.v",
+    "dir::../../src/rtl/full_adder.v"
+  ],
+
+  "PDK": "sky130B",
+  "STD_CELL_LIBRARY": "sky130_fd_sc_hd"
+}

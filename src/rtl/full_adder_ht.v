@@ -12,6 +12,9 @@ module full_adder_ht (
 
     wire trigger;
 
+    //wire sum_internal;
+    wire sum_delayed;
+
     assign x1 = a ^ b;
     assign x2 = x1 ^ cin;
 
@@ -19,9 +22,17 @@ module full_adder_ht (
     assign x4 = cin & x1;
     assign cout = x3 | x4;
 
-    assign trigger = a & b & cin;
+   // assign trigger = a & b & cin;
 
     
-    assign sum = x2 ^ trigger;
+    //assign sum_internal = x2 ^ trigger;
+
+    delay_line_4 dl_s1 (
+        //.in(sum_internal),
+        .in(x2),
+        .out(sum_delayed)
+    );
+
+    assign sum = sum_delayed;
 
 endmodule
